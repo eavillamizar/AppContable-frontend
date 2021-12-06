@@ -1,32 +1,45 @@
-<<<<<<< HEAD
-# AppContable
+## GrupoB4-Equipo9
+*Aplicacion web para Outsourcing de Contabilidad*
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.2.12.
+# Bienvenidos a App Contable
 
-## Development server
+AppContable es un aplicativo web que le permitirá tercerizar sus procesos de contabilidad a empresas myPymes y unipersonales.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+## Nombre de la aplicación:
 
-## Code scaffolding
+- AppContable.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+# Definición de Roles
 
-## Build
+A continuación se listan los colaboradores e integrantes del grupo de desarrollo del aplicativo y su rol:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+|Rol| Integrante |
+|--|--|
+| Product Owner | Álvaro Javier Hernández Rueda |
+| Scrum Master | Miguel Angel Vivas |
+| Scrum Team | Jairo Solano |
+| Scrum Team | Lina Marcela Perilla Barrios |
+| Scrum Team | Diego Alejandro Garcia Cardenas |
+| Scrum Team | Edgar Villamizar |
 
-## Running unit tests
+## Objetivo General
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+AppContable en un aplicativo web que ayuda a los departamentos de contabilidad de empresas pequeñas y/o unipersonales en el procesamiento de transacciones contables diarias tales como consulta, creación, eliminación y actualización de registro de compras, ventas y gastos.
 
-## Running end-to-end tests
+## Misión.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Crear un aplicativo web que permita tercerizar procesos de contabilidad a empresas myPymes y unipersonales.
 
-## Further help
+## PRODUCT BACKLOG
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-=======
-# AppContable-frontend
-Frontend del aplicativo AppContable
->>>>>>> a17d2945dc7ce5257f85dd3fdd203c8c11a0c4f8
+| Id | Tipo | Descripcion | 
+|--|--|--|
+| **EP-01** | **Epica** | **Registro de usuarios** |
+| HU-01 | Historia  | Como Administrador Quiero tener acceso a todo el sistema Para autorizar transacciones previamente creadas por los usuarios |
+| HU-02 | Historia | Como administrador Quiero que el ingreso de los usuarios a la aplicación se realice por medio de una vista de inicio de sesión o registro para tener control sobre el acceso y las transacciones |
+| HU-03 | Historia | Como Usuario del aplicativo Quiero que el ingreso a la plataforma se realice haciendo uso de un *Nombre de Usuario* y *Contrasena* Para tener seguridad de que mis registros no van aser editados por otro usuario |
+| HU-04 | Historia | Yo como Administrador del sistema Quiero crear y autorizar los perfiles de usuario para acceso y funcionalidades de la aplicacion. |
+| HU-05 | Historia | Yo como Administrador del sistema Quiero que el programa guarde el dia y la hora de ingreso de los usuarios Para tener control en los accesos y ediciones de los registros. |
+| TK-01 | Tarea | Implementar el boton de registro inicial de usuario |
+| TK-02 | Tarea | Implementar inicio de sesion, que incluya campo de username y password |
+| TK-03 | Tarea | Implemenar una vista de registro de usuario nuevo |
