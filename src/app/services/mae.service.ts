@@ -6,11 +6,15 @@ import { map } from 'rxjs/operators';
 
 import { Mae } from 'src/models/mae.models';
 
+import { environment } from 'src/environments/environment';
+
+const url = environment.apiUrl + "/maes";
+
 @Injectable({
   providedIn: 'root'
 })
 export class MaeService {
-  url='http://localhost:3000/api/maes';
+  //url='http://localhost:3000/api/maes';
   maes: Mae[] = []; // variable o lista donde se almacenan los Maes (Cuentas Maestras o el Contexto que estas trabajando).Array en memoria
   maeUpdated = new Subject<Mae[]>(); // variable = new Subject<tipo: arreglo de Post>()
 
@@ -18,7 +22,7 @@ export class MaeService {
 
   addMae(mae: Mae) {
      this.http
-      .post<{ message: string }>(this.url, mae)
+      .post<{ message: string }>(url, mae)
       .subscribe((response) => {
         console.log(response);
         this.maes.push(mae); // agrega
@@ -30,7 +34,7 @@ export class MaeService {
 
   getMaes() {
     this.http
-      .get<any>(this.url)
+      .get<any>(url)
       .pipe(map((maesData) => {
         return maesData.map(
           (mae: {
@@ -82,7 +86,7 @@ export class MaeService {
   }*/
 
   deleteMae(id: string) {
-    this.http.delete(`${this.url}/${id}`).subscribe((response) => {
+    this.http.delete(`${url}/${id}`).subscribe((response) => {
       console.log(response);
       const maesFiltered = this.maes.filter((mae) => mae.id != id);  // De la lista maes filtreme todos los maes con _id diferente al id que llega arriba como entrada.
       this.maes = maesFiltered; // Generamos la nueva lista mae sin el elemento que eliminamos.
@@ -91,7 +95,7 @@ export class MaeService {
   }
 
   updateMae(mae: Mae, id: string) {
-    this.http.put(`${this.url}/${id}`, mae).subscribe((response) => {
+    this.http.put(`${url}/${id}`, mae).subscribe((response) => {
       const newMaes = [...this.maes];
       const oldMaeIndex = newMaes.findIndex((mae) => mae.id === id);
       newMaes[oldMaeIndex] = mae;
